@@ -12,7 +12,7 @@ def isImage(file):
 
 
 def isNotWebp(file):
-    return ".png" in file or ".jpg" in file
+    return ".png" in file or ".jpg" in file or ".jpeg" in file
 
 
 def convert(basepath):
@@ -25,7 +25,6 @@ def convert(basepath):
 
 def recursion_folder(basepath):
     global count
-
     if os.path.isfile(basepath):
         if isImage(basepath):
             count = count + 1
